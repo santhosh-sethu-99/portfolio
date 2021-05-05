@@ -63,13 +63,15 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: TitilliumWeb
+    - family: MajorMono
       fonts:
-        - asset: assets/fonts/TitilliumWeb/TitilliumWeb-Bold.ttf
+        - asset: assets/fonts/MajorMono/MajorMonoDisplay-Regular.ttf
+    - family: Itim
+      fonts:
+        - asset: assets/fonts/Itim/Itim-Regular.ttf
     - family: Github
       fonts:
         - asset: assets/fonts/Github.ttf
-        - asset: assets/fonts/Linkedin.ttf
     - family: Linkedin
       fonts:
         - asset: assets/fonts/Linkedin.ttf
