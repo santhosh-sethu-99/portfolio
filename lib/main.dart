@@ -11,9 +11,6 @@ class Portfolio extends StatelessWidget {
     return MaterialApp(
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'TitilliumWeb',
-      ),
     );
   }
 }

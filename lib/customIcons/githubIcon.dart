@@ -27,6 +27,4 @@ class GithubIcon {
 
   static const IconData mark_github =
       IconData(0xf308, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData linkedin = IconData(0xe800,
-      fontFamily: 'Linkedin', fontPackage: 'assets/fonts/Linkedin.ttf');
 }
