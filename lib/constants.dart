@@ -1,43 +1,61 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+
+// Logo
+final logoPortfolio = AnimatedTextKit(
+  animatedTexts: [
+    ColorizeAnimatedText(
+      'PORTFOLIO!',
+      textStyle: TextStyle(
+        fontSize: 40.0,
+        fontFamily: 'Roboto',
+        fontWeight: FontWeight.w100,
+        letterSpacing: 3,
+      ),
+      colors: [
+        Colors.teal,
+        Colors.white,
+      ],
+    ),
+  ],
+  totalRepeatCount: 1,
+  pause: Duration(milliseconds: 100),
+);
+
+final quote = Align(
+          alignment: Alignment.center,
+          child: AnimatedTextKit(
+            animatedTexts: [
+              TypewriterAnimatedText(
+                'talk is cheap; show me the code;',
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontFamily: 'SourceCodePro',
+                  fontWeight: FontWeight.w100,
+                ),
+                speed: const Duration(milliseconds: 200),
+              ),
+            ],
+            totalRepeatCount: 1,
+            pause: const Duration(milliseconds: 100),
+          ),
+        ),
 
 // Greetings
-const kHello = Text(
-  'Hellö,',
-  style: TextStyle(
-    fontSize: 80,
-    fontFamily: 'Itim',
-    color: Colors.white60,
-  ),
-);
+const kHello = 'Hellö,';
 
 // About
-const kIAm = Text(
-  ' I\'m ',
-  style: TextStyle(
-    fontSize: 80,
-    fontFamily: 'Itim',
-    color: Colors.white60,
-  ),
-);
+const kIAm = 'I\'m ';
+const kFirstName = 'Santhosh Kumar';
 
-const kFirstName = Text(
-  'Santhosh Kumar',
-  style: TextStyle(
-    fontSize: 80,
-    fontFamily: 'Itim',
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
-  ),
-);
+const kLastName = 'Sethuraman';
 
-const kLastName = Text(
-  '        Sethuraman',
-  style: TextStyle(
-    fontSize: 80,
-    fontFamily: 'Itim',
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
-  ),
+const kTextStyle = TextStyle(
+  fontSize: 80,
+  fontFamily: 'Roboto',
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
 );
 
 const kAboutYou = '';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/appBar.dart';
-import 'body.dart';
+import 'package:portfolio/appBar/appBar.dart';
+import 'body/body.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,23 +21,18 @@ class _HomeScreenState extends State<HomeScreen> {
             height: double.infinity,
             width: double.infinity,
           ),
-          ListView(
-            children: [
-              SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    child: Column(
-                      children: [
-                        CustomAppBar(),
-                        Body(),
-                      ],
-                    ),
-                  ),
+          Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    CustomAppBar(),
+                    Body(),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),

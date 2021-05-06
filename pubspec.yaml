@@ -34,6 +34,7 @@ dev_dependencies:
     sdk: flutter
   url_launcher: ^6.0.3
   animated_text_kit: ^4.2.1
+  responsive_builder: ^0.4.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -49,6 +50,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/codingWallpaper.jpeg
+    - assets/images/profile.jpeg
+    # - assets/images/profile.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -66,9 +69,24 @@ flutter:
     - family: MajorMono
       fonts:
         - asset: assets/fonts/MajorMono/MajorMonoDisplay-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Roboto/Roboto-medium.ttf
+          weight: 500
     - family: Itim
       fonts:
         - asset: assets/fonts/Itim/Itim-Regular.ttf
+    - family: SourceCodePro
+      fonts:
+        - asset: assets/fonts/SourceCodePro/SourceCodePro-ExtraLight.ttf
+          weight: 100
     - family: Github
       fonts:
         - asset: assets/fonts/Github.ttf
