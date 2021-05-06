@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
+import '../chips.dart';
+import '../floatingActionButton.dart';
+import '../customIcons/githubIcon.dart';
+import '../customIcons/linkedinIcon.dart';
 
 class BodyMobileOrTablet extends StatelessWidget {
   @override
@@ -95,6 +99,90 @@ class BodyMobileOrTablet extends StatelessWidget {
               ),
               const SizedBox(
                 height: 30,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Technical Skills:',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w100,
+                    color: Colors.teal,
+                    letterSpacing: 3,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Chips(
+                  list: kTechnicalSkills,
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Soft Skills:',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w100,
+                    color: Colors.teal,
+                    letterSpacing: 3,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Chips(
+                  list: kSoftSkills,
+                ),
+              ),
+              const SizedBox(
+                height: 200,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ContactButton(
+                      icon: Icons.phone,
+                      link: '',
+                    ),
+                    ContactButton(
+                      icon: LinkedinIcon.linkedin,
+                      link: kLinkedin,
+                    ),
+                    ContactButton(
+                      icon: GithubIcon.mark_github,
+                      link: kGithub,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

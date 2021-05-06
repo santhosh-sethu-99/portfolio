@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
+import '../chips.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class BodyDesktop extends StatelessWidget {
   @override
@@ -85,16 +87,102 @@ class BodyDesktop extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'FLUTTER DEVELOPER',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w100,
-                    color: Colors.teal,
-                    letterSpacing: 5,
-                  ),
+                // child: Text(
+                //   'FLUTTER DEVELOPER',
+                //   style: TextStyle(
+                //     fontSize: 30,
+                //     fontFamily: 'Roboto',
+                //     fontWeight: FontWeight.w100,
+                //     color: Colors.teal,
+                //     letterSpacing: 7,
+                //   ),
+                // ),
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    ColorizeAnimatedText('FLUTTER DEVELOPER',
+                        textStyle: TextStyle(
+                          fontSize: 30.0,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w100,
+                          letterSpacing: 5,
+                        ),
+                        colors: [
+                          Colors.teal,
+                          Colors.white,
+                        ],
+                        speed: Duration(milliseconds: 200)),
+                  ],
+                  totalRepeatCount: 1,
+                  pause: Duration(milliseconds: 100),
                 ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Technical Skills:',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w100,
+                              color: Colors.teal,
+                              letterSpacing: 3,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Soft Skills:',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w100,
+                              color: Colors.teal,
+                              letterSpacing: 3,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Chips(list: kTechnicalSkills)),
+                  ),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Chips(list: kSoftSkills),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

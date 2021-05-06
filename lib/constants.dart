@@ -23,30 +23,31 @@ final logoPortfolio = AnimatedTextKit(
 );
 
 final quote = Align(
-          alignment: Alignment.center,
-          child: AnimatedTextKit(
-            animatedTexts: [
-              TypewriterAnimatedText(
-                'talk is cheap; show me the code;',
-                textStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontFamily: 'SourceCodePro',
-                  fontWeight: FontWeight.w100,
-                ),
-                speed: const Duration(milliseconds: 200),
-              ),
-            ],
-            totalRepeatCount: 1,
-            pause: const Duration(milliseconds: 100),
-          ),
+  alignment: Alignment.center,
+  child: AnimatedTextKit(
+    animatedTexts: [
+      TypewriterAnimatedText(
+        'talk is cheap; show me the code;',
+        textStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 30,
+          fontFamily: 'SourceCodePro',
+          fontWeight: FontWeight.w100,
         ),
+        speed: const Duration(milliseconds: 200),
+        textAlign: TextAlign.center,
+      ),
+    ],
+    totalRepeatCount: 1,
+    pause: const Duration(milliseconds: 100),
+  ),
+);
 
 // Greetings
-const kHello = 'Hellö,';
+const String kHello = 'Hellö,';
 
 // About
-const kIAm = 'I\'m ';
+const String kIAm = 'I\'m ';
 const kFirstName = 'Santhosh Kumar';
 
 const kLastName = 'Sethuraman';
@@ -100,6 +101,3 @@ const kLinkedin =
 const kPhoneNumber = '+91-9047097827';
 
 const kEmailId = 'sethuramansanthoshkumar@gmail.com';
-
-// Quotes
-const kCodingQuote = 'Talk is Cheap, Show me the Code!';

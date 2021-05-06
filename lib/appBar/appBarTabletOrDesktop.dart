@@ -3,7 +3,6 @@ import '../floatingActionButton.dart';
 import '../constants.dart';
 import '../customIcons/githubIcon.dart';
 import '../customIcons/linkedinIcon.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 class AppBarTabletOrDesktop extends StatelessWidget {
   @override
@@ -17,11 +16,24 @@ class AppBarTabletOrDesktop extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ContactButton(icon: LinkedinIcon.linkedin, link: kLinkedin),
+                ContactButton(
+                  icon: Icons.phone,
+                  link: '',
+                ),
                 SizedBox(
                   width: 10,
                 ),
-                ContactButton(icon: GithubIcon.mark_github, link: kGithub),
+                ContactButton(
+                  icon: LinkedinIcon.linkedin,
+                  link: kLinkedin,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                ContactButton(
+                  icon: GithubIcon.mark_github,
+                  link: kGithub,
+                ),
               ],
             ),
           ],
@@ -29,25 +41,7 @@ class AppBarTabletOrDesktop extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        Align(
-          alignment: Alignment.center,
-          child: AnimatedTextKit(
-            animatedTexts: [
-              TypewriterAnimatedText(
-                'talk is cheap; show me the code;',
-                textStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontFamily: 'SourceCodePro',
-                  fontWeight: FontWeight.w100,
-                ),
-                speed: const Duration(milliseconds: 200),
-              ),
-            ],
-            totalRepeatCount: 1,
-            pause: const Duration(milliseconds: 100),
-          ),
-        ),
+        quote,
       ],
     );
   }
