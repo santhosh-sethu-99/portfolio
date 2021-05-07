@@ -22,6 +22,23 @@ final logoPortfolio = AnimatedTextKit(
   pause: Duration(milliseconds: 100),
 );
 
+const kTextStyle1 = TextStyle(
+  fontSize: 20,
+  fontFamily: 'Roboto',
+  fontWeight: FontWeight.w300,
+  color: Colors.white,
+  letterSpacing: 2,
+  height: 1.5,
+);
+
+const kTextStyle2 = TextStyle(
+  fontSize: 30,
+  fontFamily: 'Roboto',
+  fontWeight: FontWeight.w100,
+  color: Colors.teal,
+  letterSpacing: 3,
+);
+
 final quote = Align(
   alignment: Alignment.center,
   child: AnimatedTextKit(
@@ -46,18 +63,24 @@ final quote = Align(
 // Greetings
 const String kHello = 'Hellö,';
 
+final profile = Container(
+  height: 250,
+  width: 250,
+  decoration: BoxDecoration(
+    shape: BoxShape.circle,
+    image: DecorationImage(
+      image: AssetImage(
+        'assets/images/profile.jpeg',
+      ),
+      fit: BoxFit.cover,
+    ),
+  ),
+);
 // About
 const String kIAm = 'I\'m ';
 const kFirstName = 'Santhosh Kumar';
 
 const kLastName = 'Sethuraman';
-
-const kTextStyle = TextStyle(
-  fontSize: 80,
-  fontFamily: 'Roboto',
-  fontWeight: FontWeight.bold,
-  color: Colors.white,
-);
 
 const kAboutYou = '';
 
@@ -81,13 +104,19 @@ const kSoftSkills = [
   'Motivating',
 ];
 
+const kHobbies = [
+  'Photography',
+  'Reading Books',
+  'Cooking',
+  'Travel',
+];
+
 // Experience
 const kExperience = {
   'companyName': 'ChennaiHub',
   'fromDate': 'December, 2020',
   'toDate': 'March, 2021',
-  'role': 'Software Developer (Mobile Developement)',
-  'emplomentType': 'Intern',
+  'role': 'Software Developer Intern',
   'description':
       'This internship gained me some real world software engineering experience. I was assigned to work as a Mobile Developer. I was able to improve my code quality and logical abilities in this four month period. Worked closely with other team members to develop an mobile app for RealEstate Platform.'
 };

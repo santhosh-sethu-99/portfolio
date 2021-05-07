@@ -15,18 +15,7 @@ class BodyDesktop extends StatelessWidget {
             children: [
               Align(
                 alignment: Alignment.centerLeft,
-                child: Container(
-                  height: 300,
-                  width: 300,
-                  child: CircleAvatar(
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/profile.jpeg',
-                      ),
-                      fit: BoxFit.fitHeight,
-                    ),
-                  ),
-                ),
+                child: profile,
               ),
               const SizedBox(
                 height: 30,
@@ -87,33 +76,68 @@ class BodyDesktop extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerLeft,
-                // child: Text(
-                //   'FLUTTER DEVELOPER',
-                //   style: TextStyle(
-                //     fontSize: 30,
-                //     fontFamily: 'Roboto',
-                //     fontWeight: FontWeight.w100,
-                //     color: Colors.teal,
-                //     letterSpacing: 7,
-                //   ),
-                // ),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    ColorizeAnimatedText('FLUTTER DEVELOPER',
-                        textStyle: TextStyle(
-                          fontSize: 30.0,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w100,
-                          letterSpacing: 5,
-                        ),
-                        colors: [
-                          Colors.teal,
-                          Colors.white,
-                        ],
-                        speed: Duration(milliseconds: 200)),
-                  ],
-                  totalRepeatCount: 1,
-                  pause: Duration(milliseconds: 100),
+                child: Text(
+                  'FLUTTER DEVELOPER',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w100,
+                    color: Colors.teal,
+                    letterSpacing: 7,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Experience: ',
+                  style: kTextStyle2,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '- ${kExperience['companyName']!}[Dec,2020 - Mar,2021]',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                    letterSpacing: 2,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '  ${kExperience['role']!}',
+                  style: kTextStyle1,
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '  ${kExperience['description']!}',
+                  style: kTextStyle1,
                 ),
               ),
               const SizedBox(
@@ -136,13 +160,7 @@ class BodyDesktop extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Technical Skills:',
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w100,
-                              color: Colors.teal,
-                              letterSpacing: 3,
-                            ),
+                            style: kTextStyle2,
                           ),
                         ),
                       ),
@@ -151,13 +169,7 @@ class BodyDesktop extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Soft Skills:',
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w100,
-                              color: Colors.teal,
-                              letterSpacing: 3,
-                            ),
+                            style: kTextStyle2,
                           ),
                         ),
                       ),
@@ -185,6 +197,42 @@ class BodyDesktop extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+          Container(
+            height: 20,
+          ),
+          Divider(
+            thickness: 1,
+            color: Colors.teal,
+          ),
+          Container(
+            height: 20,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Hobbies: ',
+              style: kTextStyle2,
+            ),
+          ),
+          Container(
+            height: 15,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Chips(
+              list: kHobbies,
+            ),
+          ),
+          Container(
+            height: 20,
+          ),
+          Divider(
+            thickness: 1,
+            color: Colors.teal,
+          ),
+          Container(
+            height: 100,
           ),
         ],
       ),

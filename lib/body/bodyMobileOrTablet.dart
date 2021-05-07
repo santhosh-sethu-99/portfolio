@@ -15,19 +15,8 @@ class BodyMobileOrTablet extends StatelessWidget {
           Column(
             children: [
               Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  child: CircleAvatar(
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/profile.jpeg',
-                      ),
-                      fit: BoxFit.fitHeight,
-                    ),
-                  ),
-                ),
+                alignment: Alignment.center,
+                child: profile,
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -105,19 +94,63 @@ class BodyMobileOrTablet extends StatelessWidget {
                 color: Colors.teal,
               ),
               const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Experience: ',
+                  style: kTextStyle2,
+                ),
+              ),
+              const SizedBox(
                 height: 10,
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Technical Skills:',
+                  '- ${kExperience['companyName']!}[Dec,2020 - Mar,2021]',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w100,
-                    color: Colors.teal,
-                    letterSpacing: 3,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                    letterSpacing: 2,
                   ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '${kExperience['role']!}',
+                  style: kTextStyle1,
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '${kExperience['description']!}',
+                  style: kTextStyle1,
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Technical Skills:',
+                  style: kTextStyle2,
                 ),
               ),
               const SizedBox(
@@ -137,19 +170,13 @@ class BodyMobileOrTablet extends StatelessWidget {
                 color: Colors.teal,
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Soft Skills:',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w100,
-                    color: Colors.teal,
-                    letterSpacing: 3,
-                  ),
+                  style: kTextStyle2,
                 ),
               ),
               const SizedBox(
@@ -160,6 +187,36 @@ class BodyMobileOrTablet extends StatelessWidget {
                 child: Chips(
                   list: kSoftSkills,
                 ),
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Hobbies: ',
+                  style: kTextStyle2,
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Chips(
+                  list: kHobbies,
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.teal,
               ),
               const SizedBox(
                 height: 200,
